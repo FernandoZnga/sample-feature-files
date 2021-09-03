@@ -4,7 +4,7 @@ Feature: Profile menu
     I want to -> have menu options
     So I can -> update my Profile info
 
-  @Handheld-iPhone_X
+  @Handheld-iPhone_X @E2E
   Scenario: Add my Profile Photo from gallery_HP
     As a -> Whatsapp user, 
     I want to -> have the option to change my Photo
@@ -24,7 +24,7 @@ Feature: Profile menu
     When Add a photo from "camera"
     Then A new photo will be displayed
 
-  @Handheld-iPhone_X
+  @Handheld-iPhone_X @UAT
   Scenario: Edit my Profile Photo from gallery_HP
     As a -> Whatsapp user, 
     I want to -> have the option to change my Photo
@@ -102,3 +102,9 @@ Feature: Profile menu
     And Enter a long About text more than "255" characters
     Then The input section won't let more than "139" characters
     And A new About will be displayed
+
+  Scenario: Add my personal photo to profile
+    Given The user is on the Settings menu
+    And There is already a Photo in the Profile
+    When Edit the Photo from "profile"
+    Then A new photo will be displayed
