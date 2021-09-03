@@ -16,7 +16,7 @@ Feature: Whatsapp
     And Provide "a valid" security code
     Then Watsapp will request to Restore any backup from cloud
     And Request to Edit the Profile
-    And Bring the option to Start Messaging
+    And Bring the option to Start Messaging friend
 
   @Handheld-iPhone_X
   Scenario: Unsuccessfully link an smartphone with Whatsapp by phone number_SP
